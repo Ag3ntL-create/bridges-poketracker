@@ -15,42 +15,31 @@ body{display:flex;flex-direction:column}
 .lm{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:2px;color:var(--acc)}
 .ls{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:2px;color:var(--txt)}
 .lb{background:var(--acc2);color:#fff;font-size:9px;font-weight:600;letter-spacing:1px;padding:2px 7px;border-radius:20px;margin-left:4px;vertical-align:middle}
-.hstats{display:flex;align-items:center;gap:20px}
+.hstats{display:flex;align-items:center;gap:16px}
 .stat-val{font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--acc);line-height:1;text-align:right}
 .stat-lbl{font-size:9px;color:var(--muted);letter-spacing:0.5px;text-transform:uppercase}
-.export-btn{background:transparent;border:1px solid var(--bdr);color:var(--muted);padding:6px 14px;border-radius:7px;font-size:11px;font-weight:600;cursor:pointer;transition:all 0.2s}
-.export-btn:hover{border-color:var(--acc);color:var(--acc)}
+.hdr-btn{background:transparent;border:1px solid var(--bdr);color:var(--muted);padding:6px 14px;border-radius:7px;font-size:11px;font-weight:600;cursor:pointer;transition:all 0.2s}
+.hdr-btn:hover{border-color:var(--acc);color:var(--acc)}
+.hdr-btn.connected{border-color:var(--ok);color:var(--ok)}
 .wrap{display:flex;flex:1;overflow:hidden}
-.side{width:300px;flex-shrink:0;border-right:1px solid var(--bdr);overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:14px;background:var(--bg)}
+.side{width:280px;flex-shrink:0;border-right:1px solid var(--bdr);overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:14px;background:var(--bg)}
 .main{flex:1;overflow-y:auto;padding:20px;background:var(--bg)}
 .upz{border:2px dashed var(--bdr);border-radius:12px;padding:24px 16px;text-align:center;cursor:pointer;transition:all 0.2s;background:var(--surf)}
 .upz:hover,.upz.drag{border-color:var(--acc);background:rgba(245,200,66,0.05)}
 .upz-icon{font-size:30px;margin-bottom:10px;display:block}
 .upz-title{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:1px;color:var(--txt);margin-bottom:4px}
-.upz-sub{font-size:11px;color:var(--muted)}
+.upz-sub{font-size:11px;color:var(--muted);line-height:1.6}
 .up-btn{margin-top:12px;background:var(--acc);color:#0a0a0f;border:none;padding:8px 20px;border-radius:8px;font-weight:600;font-size:12px;cursor:pointer;transition:opacity 0.2s}
 .up-btn:hover{opacity:0.85}
-.prev-card{border-radius:10px;overflow:hidden;border:1px solid var(--bdr);background:var(--surf)}
-.prev-img{width:100%;aspect-ratio:3/4;object-fit:contain;display:block;background:var(--surf2)}
-.prev-ft{padding:7px 12px;font-size:10px;color:var(--muted);display:flex;align-items:center;justify-content:space-between}
-.anl{background:var(--surf);border:1px solid var(--acc);border-radius:10px;padding:16px;text-align:center}
-.spin{width:30px;height:30px;border:3px solid var(--bdr);border-top-color:var(--acc);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 10px}
-@keyframes spin{to{transform:rotate(360deg)}}
-.anl-txt{font-size:11px;color:var(--muted)}
-.cfm{background:var(--surf);border:1px solid var(--acc);border-radius:10px;padding:16px;box-shadow:0 0 20px rgba(245,200,66,0.1)}
-.cfm-title{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:1px;color:var(--acc);margin-bottom:12px}
-.fgrp{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
-.fld{display:flex;flex-direction:column;gap:3px}
-.fld label{font-size:9px;text-transform:uppercase;letter-spacing:0.8px;color:var(--muted);font-weight:600}
-.fld input,.fld select{background:var(--surf2);border:1px solid var(--bdr);border-radius:5px;padding:6px 8px;color:var(--txt);font-family:'DM Sans',sans-serif;font-size:12px;outline:none;width:100%;transition:border-color 0.2s}
-.fld input:focus,.fld select:focus{border-color:var(--acc)}
-.fld select option{background:var(--surf2)}
-.cfm-fn{font-family:monospace;font-size:9px;color:var(--muted);margin-bottom:10px;background:var(--surf2);padding:5px 8px;border-radius:4px;word-break:break-all}
-.cfm-acts{display:flex;gap:8px}
-.btn-ok{flex:1;background:var(--ok);color:#0a0a0f;border:none;padding:9px;border-radius:7px;font-weight:600;font-size:12px;cursor:pointer;transition:opacity 0.2s}
-.btn-ok:hover{opacity:0.85}
-.btn-no{flex:1;background:transparent;color:var(--acc2);border:1px solid var(--acc2);padding:9px;border-radius:7px;font-weight:600;font-size:12px;cursor:pointer;transition:all 0.2s}
-.btn-no:hover{background:rgba(232,66,110,0.1)}
+.queue-box{background:var(--surf);border:1px solid var(--bdr);border-radius:10px;padding:12px 14px}
+.queue-title{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:1px;color:var(--muted);margin-bottom:8px}
+.queue-item{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--bdr);font-size:11px}
+.queue-item:last-child{border-bottom:none}
+.q-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.q-done{background:var(--ok)}.q-active{background:var(--acc);animation:pulse 1s infinite}.q-wait{background:var(--bdr)}.q-err{background:var(--acc2)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.q-name{flex:1;color:var(--txt);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.q-status{color:var(--muted);font-size:10px}
 .sec-title{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:1.5px;color:var(--muted);margin-bottom:8px}
 .fg{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px}
 .fi{background:var(--surf);border:1px solid var(--bdr);border-radius:5px;padding:6px 8px;color:var(--txt);font-family:'DM Sans',sans-serif;font-size:11px;outline:none;width:100%;transition:border-color 0.2s}
@@ -68,8 +57,7 @@ table{width:100%;border-collapse:collapse;font-size:12px}
 thead{background:var(--surf2);position:sticky;top:0}
 th{padding:10px 12px;text-align:left;font-size:9px;text-transform:uppercase;letter-spacing:0.8px;color:var(--muted);font-weight:600;cursor:pointer;white-space:nowrap;user-select:none;transition:color 0.2s}
 th:hover{color:var(--acc)}
-th.ns{cursor:default}
-th.ns:hover{color:var(--muted)}
+th.ns{cursor:default}th.ns:hover{color:var(--muted)}
 td{padding:9px 12px;border-top:1px solid var(--bdr);vertical-align:middle}
 tr:hover td{background:rgba(255,255,255,0.02)}
 .thumb{width:30px;height:42px;object-fit:cover;border-radius:3px;border:1px solid var(--bdr);display:block}
@@ -77,7 +65,9 @@ tr:hover td{background:rgba(255,255,255,0.02)}
 .tb{display:inline-block;padding:2px 7px;border-radius:20px;font-size:10px;font-weight:500}
 .tb-Fire{background:rgba(255,100,50,0.15);color:#ff7744}.tb-Water{background:rgba(50,150,255,0.15);color:#5599ff}.tb-Grass{background:rgba(50,200,100,0.15);color:#44cc77}.tb-Lightning{background:rgba(255,220,50,0.15);color:#ffcc33}.tb-Psychic{background:rgba(200,50,200,0.15);color:#cc55cc}.tb-Fighting{background:rgba(200,100,50,0.15);color:#cc7744}.tb-Darkness{background:rgba(100,50,150,0.15);color:#9966cc}.tb-Metal{background:rgba(150,150,180,0.15);color:#aaaacc}.tb-Fairy{background:rgba(255,150,200,0.15);color:#ff88bb}.tb-Dragon{background:rgba(50,100,200,0.15);color:#5577ee}.tb-Colorless{background:rgba(150,150,150,0.15);color:#aaaaaa}
 .first-ed{background:rgba(245,200,66,0.15);color:var(--acc);font-size:9px;padding:1px 5px;border-radius:4px;font-weight:600}
-.fn-cell{font-family:monospace;font-size:9px;color:var(--muted);max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fn-cell{font-family:monospace;font-size:9px;color:var(--muted);max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.drive-link{color:var(--acc);text-decoration:none;font-size:10px}
+.drive-link:hover{text-decoration:underline}
 .act-btns{display:flex;gap:5px}
 .btn-edit{background:transparent;border:1px solid var(--bdr);color:var(--muted);padding:3px 8px;border-radius:4px;font-size:10px;cursor:pointer;transition:all 0.2s}
 .btn-edit:hover{border-color:var(--acc);color:var(--acc)}
@@ -91,11 +81,35 @@ tr:hover td{background:rgba(255,255,255,0.02)}
 .toast-ok{background:var(--ok);color:#0a0a0f}
 .toast-err{background:var(--acc2);color:#fff}
 @keyframes su{from{transform:translateY(16px);opacity:0}to{transform:translateY(0);opacity:1}}
+.verify-ov{position:fixed;inset:0;background:rgba(0,0,0,0.92);display:flex;align-items:center;justify-content:center;z-index:200;backdrop-filter:blur(4px)}
+.verify-box{background:var(--surf);border:1px solid var(--acc);border-radius:16px;width:90%;max-width:860px;max-height:92vh;display:flex;overflow:hidden;box-shadow:0 0 40px rgba(245,200,66,0.1)}
+.verify-img-pane{width:340px;flex-shrink:0;background:var(--surf2);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;gap:16px;border-right:1px solid var(--bdr)}
+.verify-card-img{max-width:100%;max-height:420px;object-fit:contain;border-radius:10px;border:1px solid var(--bdr)}
+.verify-progress{font-size:11px;color:var(--muted);text-align:center}
+.verify-prog-bar{width:100%;height:3px;background:var(--bdr);border-radius:2px;overflow:hidden}
+.verify-prog-fill{height:100%;background:var(--acc);transition:width 0.3s}
+.verify-form-pane{flex:1;overflow-y:auto;padding:24px;display:flex;flex-direction:column}
+.verify-title{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:var(--acc);margin-bottom:4px}
+.verify-sub{font-size:11px;color:var(--muted);margin-bottom:16px}
+.fgrp{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+.fld{display:flex;flex-direction:column;gap:3px}
+.fld label{font-size:9px;text-transform:uppercase;letter-spacing:0.8px;color:var(--muted);font-weight:600}
+.fld input,.fld select{background:var(--surf2);border:1px solid var(--bdr);border-radius:5px;padding:7px 9px;color:var(--txt);font-family:'DM Sans',sans-serif;font-size:12px;outline:none;width:100%;transition:border-color 0.2s}
+.fld input:focus,.fld select:focus{border-color:var(--acc)}
+.fld select option{background:var(--surf2)}
+.cfm-fn{font-family:monospace;font-size:9px;color:var(--muted);margin-bottom:12px;background:var(--surf2);padding:5px 8px;border-radius:4px;word-break:break-all}
+.verify-acts{display:flex;gap:8px;margin-top:auto;padding-top:12px}
+.btn-ok{flex:1;background:var(--ok);color:#0a0a0f;border:none;padding:10px;border-radius:7px;font-weight:600;font-size:12px;cursor:pointer;transition:opacity 0.2s}
+.btn-ok:hover{opacity:0.85}
+.btn-skip{flex:1;background:transparent;color:var(--muted);border:1px solid var(--bdr);padding:10px;border-radius:7px;font-weight:600;font-size:12px;cursor:pointer;transition:all 0.2s}
+.btn-skip:hover{border-color:var(--acc2);color:var(--acc2)}
+.spin{width:28px;height:28px;border:3px solid var(--bdr);border-top-color:var(--acc);border-radius:50%;animation:spin 0.8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
 .modal-ov{position:fixed;inset:0;background:rgba(0,0,0,0.75);display:flex;align-items:center;justify-content:center;z-index:500;backdrop-filter:blur(3px)}
 .modal-box{background:var(--surf);border:1px solid var(--acc);border-radius:14px;padding:24px;max-width:440px;width:90%;max-height:90vh;overflow-y:auto}
 .modal-title{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:1px;color:var(--acc);margin-bottom:16px}
 .modal-acts{display:flex;gap:8px;margin-top:14px}
-.api-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.85);display:flex;align-items:center;justify-content:center;z-index:9999;backdrop-filter:blur(4px)}
+.api-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.9);display:flex;align-items:center;justify-content:center;z-index:9999;backdrop-filter:blur(4px)}
 .api-box{background:var(--surf);border:1px solid var(--acc);border-radius:16px;padding:32px;max-width:420px;width:90%;text-align:center}
 .api-title{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:2px;color:var(--acc);margin-bottom:8px}
 .api-sub{font-size:12px;color:var(--muted);margin-bottom:20px;line-height:1.6}
@@ -120,6 +134,7 @@ tr:hover td{background:rgba(255,255,255,0.02)}
   </div>
 </div>
 
+<div id="verify-overlay" style="display:none" class="verify-ov"></div>
 <div id="edit-modal"></div>
 
 <header class="hdr">
@@ -127,7 +142,8 @@ tr:hover td{background:rgba(255,255,255,0.02)}
   <div class="hstats">
     <div><div class="stat-val" id="stat-cards">0</div><div class="stat-lbl">Cards</div></div>
     <div><div class="stat-val" id="stat-sets">0</div><div class="stat-lbl">Sets</div></div>
-    <button class="export-btn" id="export-btn">⬇ Export CSV</button>
+    <button class="hdr-btn" id="gdrive-btn">Connect Google Drive</button>
+    <button class="hdr-btn" id="export-btn">Export CSV</button>
   </div>
 </header>
 
@@ -135,22 +151,20 @@ tr:hover td{background:rgba(255,255,255,0.02)}
   <aside class="side">
     <div class="upz" id="upz">
       <span class="upz-icon">📸</span>
-      <div class="upz-title">Add a Card</div>
-      <div class="upz-sub">Click or drag a card photo — AI reads it automatically</div>
-      <button class="up-btn" id="up-btn">Choose Photo</button>
-      <input type="file" accept="image/*" id="file-in" style="display:none">
+      <div class="upz-title">Add Cards</div>
+      <div class="upz-sub">Select one or multiple photos — AI reads each, then you verify one by one</div>
+      <button class="up-btn" id="up-btn">Choose Photos</button>
+      <input type="file" accept="image/*" multiple id="file-in" style="display:none">
     </div>
-    <div id="preview-area"></div>
-    <div id="analyze-area"></div>
-    <div id="confirm-area"></div>
+    <div id="queue-area"></div>
     <div>
       <div class="sec-title">Filter Collection</div>
       <div class="fg">
-        <input class="fi ff" placeholder="Search by name…" id="f-name">
+        <input class="fi ff" placeholder="Search by name..." id="f-name">
         <select class="fi ff" id="f-set"><option value="">All Sets</option></select>
         <select class="fi" id="f-type"><option value="">All Types</option></select>
         <select class="fi" id="f-rarity"><option value="">All Rarities</option></select>
-        <input class="fi" placeholder="Language…" id="f-lang">
+        <input class="fi" placeholder="Language..." id="f-lang">
         <select class="fi" id="f-1ed"><option value="">1st Ed: All</option><option value="yes">Yes</option><option value="no">No</option></select>
       </div>
       <button class="clr-btn" id="clr-btn" style="display:none">Clear filters</button>
@@ -174,11 +188,16 @@ const RARITIES=["Common","Uncommon","Rare","Rare Holo","Rare Ultra","Rare Secret
 const CONDITIONS=["Mint","Near Mint","Excellent","Good","Played","Poor"];
 const SETS=["Base Set","Jungle","Fossil","Base Set 2","Team Rocket","Gym Heroes","Gym Challenge","Neo Genesis","Neo Discovery","Neo Revelation","Neo Destiny","Legendary Collection","Expedition Base Set","Aquapolis","Skyridge","EX Ruby & Sapphire","EX Sandstorm","EX Dragon","EX Team Magma vs Team Aqua","EX Hidden Legends","EX FireRed & LeafGreen","EX Team Rocket Returns","EX Deoxys","EX Emerald","EX Unseen Forces","EX Delta Species","EX Legend Maker","EX Holon Phantoms","EX Crystal Guardians","EX Dragon Frontiers","EX Power Keepers","Diamond & Pearl","Mysterious Treasures","Secret Wonders","Great Encounters","Majestic Dawn","Legends Awakened","Stormfront","Platinum","Rising Rivals","Supreme Victors","Arceus","HeartGold & SoulSilver","Unleashed","Undaunted","Triumphant","Call of Legends","Black & White","Emerging Powers","Noble Victories","Next Destinies","Dark Explorers","Dragons Exalted","Dragon Vault","Boundaries Crossed","Plasma Storm","Plasma Freeze","Plasma Blast","Legendary Treasures","XY","Flashfire","Furious Fists","Phantom Forces","Primal Clash","Double Crisis","Roaring Skies","Ancient Origins","BREAKthrough","BREAKpoint","Generations","Fates Collide","Steam Siege","Evolutions","Sun & Moon","Guardians Rising","Burning Shadows","Shining Legends","Crimson Invasion","Ultra Prism","Forbidden Light","Celestial Storm","Dragon Majesty","Lost Thunder","Team Up","Detective Pikachu","Unbroken Bonds","Unified Minds","Hidden Fates","Cosmic Eclipse","Sword & Shield","Rebel Clash","Darkness Ablaze","Champion's Path","Vivid Voltage","Shining Fates","Battle Styles","Chilling Reign","Evolving Skies","Celebrations","Fusion Strike","Brilliant Stars","Astral Radiance","Pokemon GO","Lost Origin","Silver Tempest","Crown Zenith","Scarlet & Violet","Paldea Evolved","Obsidian Flames","151","Paradox Rift","Paldean Fates","Temporal Forces","Twilight Masquerade","Shrouded Fable","Stellar Crown","Surging Sparks","Prismatic Evolutions","Journey Together","Other/Promo"];
 
+const GDRIVE_CLIENT_ID="YOUR_GOOGLE_CLIENT_ID";
+const GDRIVE_SCOPE="https://www.googleapis.com/auth/drive.file";
+
 let collection=[],sortCol="name",sortDir="asc";
 let filters={name:"",type:"",set:"",rarity:"",language:"",firstEdition:""};
-let pendingPreview=null,apiKey="";
+let apiKey="",gdriveToken=null,driveFolderId=null;
+let queue=[],queueIdx=0;
 const $=id=>document.getElementById(id);
 
+// API KEY
 const savedKey=localStorage.getItem("ptk_api_key");
 if(savedKey){apiKey=savedKey;$("api-overlay").style.display="none";}
 $("api-key-btn").addEventListener("click",()=>{
@@ -188,33 +207,91 @@ $("api-key-btn").addEventListener("click",()=>{
 });
 $("api-key-input").addEventListener("keydown",e=>{if(e.key==="Enter")$("api-key-btn").click();});
 
+// DROPDOWNS
 TYPES.forEach(t=>{let o=document.createElement("option");o.value=t;o.textContent=t;$("f-type").appendChild(o);});
 RARITIES.forEach(r=>{let o=document.createElement("option");o.value=r;o.textContent=r;$("f-rarity").appendChild(o);});
 SETS.forEach(s=>{let o=document.createElement("option");o.value=s;o.textContent=s;$("f-set").appendChild(o);});
 
+// UTILS
 function safe(s){return(s||"").replace(/[^a-zA-Z0-9]/g,"_").replace(/_+/g,"_").replace(/^_+|_+$/g,"");}
 function genFilename(card,dc){const b=safe(card.set)+"_"+safe(card.cardNumber)+"_"+safe(card.name);return(dc>0?b+"_duplicate"+dc:b)+".jpg";}
 function showToast(msg,isErr){const t=document.createElement("div");t.className="toast "+(isErr?"toast-err":"toast-ok");t.textContent=msg;$("toast-area").appendChild(t);setTimeout(()=>t.remove(),3500);}
-function saveCol(){localStorage.setItem("ptk_collection",JSON.stringify(collection.map(c=>({...c,imagePreview:null}))));}
+function saveCol(){try{localStorage.setItem("ptk_collection",JSON.stringify(collection));}catch(e){localStorage.setItem("ptk_collection",JSON.stringify(collection.map(c=>({...c,thumb:null}))));}}
 function updateStats(){$("stat-cards").textContent=collection.length;$("stat-sets").textContent=new Set(collection.map(c=>c.set).filter(Boolean)).size;}
 function getDupeCount(card,exId=null){return collection.filter(c=>c.id!==exId&&c.name===card.name&&c.set===card.set&&c.cardNumber===card.cardNumber).length;}
 function renderFilters(){$("clr-btn").style.display=Object.values(filters).some(Boolean)?"inline-block":"none";}
+function sopts(opts,val){return opts.map(o=>`<option value="${o}"${o===val?" selected":""}>${o}</option>`).join("");}
+function ssopts(val){return SETS.map(s=>`<option value="${s}"${s===val?" selected":""}>${s}</option>`).join("");}
 
 function matchSet(aiSet){
   if(!aiSet)return"";
   const direct=SETS.find(s=>s.toLowerCase()===aiSet.toLowerCase());
   if(direct)return direct;
-  const lower=aiSet.toLowerCase().replace(/[^a-z0-9]/g," ").trim();
-  const aiWords=lower.split(/\s+/).filter(w=>w.length>2);
+  const aiWords=aiSet.toLowerCase().replace(/[^a-z0-9]/g," ").split(/\s+/).filter(w=>w.length>2);
   let best="",bestScore=0;
-  SETS.forEach(s=>{
-    const sw=s.toLowerCase().replace(/[^a-z0-9]/g," ").split(/\s+/).filter(w=>w.length>2);
-    const score=aiWords.filter(w=>sw.includes(w)).length;
-    if(score>bestScore){bestScore=score;best=s;}
-  });
+  SETS.forEach(s=>{const sw=s.toLowerCase().replace(/[^a-z0-9]/g," ").split(/\s+/).filter(w=>w.length>2);const score=aiWords.filter(w=>sw.includes(w)).length;if(score>bestScore){bestScore=score;best=s;}});
   return bestScore>0?best:aiSet;
 }
 
+function compressImage(dataUrl,maxWidth,quality){
+  return new Promise(resolve=>{
+    const img=new Image();
+    img.onload=()=>{
+      const canvas=document.createElement("canvas");
+      let w=img.width,h=img.height;
+      if(w>maxWidth){h=Math.round(h*maxWidth/w);w=maxWidth;}
+      canvas.width=w;canvas.height=h;
+      canvas.getContext("2d").drawImage(img,0,0,w,h);
+      resolve(canvas.toDataURL("image/jpeg",quality));
+    };
+    img.src=dataUrl;
+  });
+}
+
+// GOOGLE DRIVE
+$("gdrive-btn").addEventListener("click",()=>{
+  if(gdriveToken){gdriveToken=null;driveFolderId=null;$("gdrive-btn").textContent="Connect Google Drive";$("gdrive-btn").classList.remove("connected");showToast("Disconnected from Google Drive");return;}
+  if(GDRIVE_CLIENT_ID==="YOUR_GOOGLE_CLIENT_ID"){alert("To enable Google Drive, you need to add a Google Client ID.\n\nInstructions:\n1. Go to console.cloud.google.com\n2. Create a project\n3. Enable Google Drive API\n4. Create OAuth credentials\n5. Replace YOUR_GOOGLE_CLIENT_ID in the code");return;}
+  const url=`https://accounts.google.com/o/oauth2/v2/auth?client_id=${GDRIVE_CLIENT_ID}&redirect_uri=${encodeURIComponent(location.origin+location.pathname)}&response_type=token&scope=${encodeURIComponent(GDRIVE_SCOPE)}`;
+  window.location.href=url;
+});
+
+(function handleOAuth(){
+  const hash=window.location.hash;
+  if(!hash.includes("access_token"))return;
+  const params=new URLSearchParams(hash.replace("#",""));
+  const token=params.get("access_token");
+  if(token){gdriveToken=token;history.replaceState(null,"",location.pathname);$("gdrive-btn").textContent="Drive Connected";$("gdrive-btn").classList.add("connected");showToast("Connected to Google Drive!");ensureFolder();}
+})();
+
+async function ensureFolder(){
+  if(!gdriveToken||driveFolderId)return driveFolderId;
+  try{
+    let res=await fetch("https://www.googleapis.com/drive/v3/files?q=name%3D'Bridges+PokeTracker'+and+mimeType%3D'application%2Fvnd.google-apps.folder'+and+trashed%3Dfalse&fields=files(id)",{headers:{Authorization:"Bearer "+gdriveToken}});
+    let d=await res.json();let rootId;
+    if(d.files&&d.files.length>0){rootId=d.files[0].id;}
+    else{res=await fetch("https://www.googleapis.com/drive/v3/files",{method:"POST",headers:{Authorization:"Bearer "+gdriveToken,"Content-Type":"application/json"},body:JSON.stringify({name:"Bridges PokeTracker",mimeType:"application/vnd.google-apps.folder"})});d=await res.json();rootId=d.id;}
+    res=await fetch(`https://www.googleapis.com/drive/v3/files?q=name%3D'Cards'+and+'${rootId}'+in+parents+and+mimeType%3D'application%2Fvnd.google-apps.folder'+and+trashed%3Dfalse&fields=files(id)`,{headers:{Authorization:"Bearer "+gdriveToken}});
+    d=await res.json();
+    if(d.files&&d.files.length>0){driveFolderId=d.files[0].id;}
+    else{res=await fetch("https://www.googleapis.com/drive/v3/files",{method:"POST",headers:{Authorization:"Bearer "+gdriveToken,"Content-Type":"application/json"},body:JSON.stringify({name:"Cards",mimeType:"application/vnd.google-apps.folder",parents:[rootId]})});d=await res.json();driveFolderId=d.id;}
+    return driveFolderId;
+  }catch(e){console.error("Folder error:",e);return null;}
+}
+
+async function uploadToDrive(base64,filename){
+  if(!gdriveToken)return null;
+  try{
+    const fid=await ensureFolder();if(!fid)return null;
+    const boundary="ptk_boundary";
+    const meta=JSON.stringify({name:filename,parents:[fid]});
+    const body=`--${boundary}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n${meta}\r\n--${boundary}\r\nContent-Type: image/jpeg\r\nContent-Transfer-Encoding: base64\r\n\r\n${base64}\r\n--${boundary}--`;
+    const res=await fetch("https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id,webViewLink",{method:"POST",headers:{Authorization:"Bearer "+gdriveToken,"Content-Type":`multipart/related; boundary=${boundary}`},body});
+    const d=await res.json();return d.webViewLink||null;
+  }catch(e){console.error("Upload error:",e);return null;}
+}
+
+// RENDER COLLECTION
 function renderCollection(){
   const filtered=collection.filter(c=>
     (!filters.name||c.name.toLowerCase().includes(filters.name.toLowerCase()))&&
@@ -224,17 +301,16 @@ function renderCollection(){
     (!filters.language||c.language.toLowerCase().includes(filters.language.toLowerCase()))&&
     (!filters.firstEdition||(filters.firstEdition==="yes"?c.isFirstEdition:!c.isFirstEdition))
   ).sort((a,b)=>{const av=String(a[sortCol]??""),bv=String(b[sortCol]??"");return sortDir==="asc"?av.localeCompare(bv):bv.localeCompare(av);});
-
   $("cnt-badge").textContent=filtered.length+" of "+collection.length+" cards";
   if(collection.length===0){$("collection-area").innerHTML=`<div class="empty"><div class="empty-icon">🃏</div><div class="empty-title">No Cards Yet</div><div class="empty-sub">Upload your first card photo to get started</div></div>`;return;}
-
   const cols=[["name","Name"],["set","Set"],["cardNumber","#"],["type","Type"],["hp","HP"],["rarity","Rarity"],["isFirstEdition","1st Ed"],["language","Lang"],["condition","Condition"],["attacks","Attacks"],["addedAt","Added"],["filename","Filename"]];
   let html=`<div class="tbl-wrap"><table><thead><tr><th class="ns">Img</th>`;
   cols.forEach(([col,lbl])=>{const arrow=sortCol===col?(sortDir==="asc"?" ↑":" ↓"):"";html+=`<th data-col="${col}">${lbl}${arrow}</th>`;});
-  html+=`<th class="ns">Actions</th></tr></thead><tbody>`;
+  html+=`<th class="ns">Drive</th><th class="ns">Actions</th></tr></thead><tbody>`;
   filtered.forEach(card=>{
-    const thumb=card.imagePreview?`<img src="${card.imagePreview}" class="thumb" alt="${card.name}">`:`<div class="thumb-ph">🃏</div>`;
-    html+=`<tr><td>${thumb}</td><td style="font-weight:500">${card.name||"—"}</td><td style="color:var(--muted);font-size:11px">${card.set||"—"}</td><td style="color:var(--muted)">${card.cardNumber||"—"}</td><td><span class="tb tb-${card.type}">${card.type||"—"}</span></td><td style="color:var(--acc);font-weight:600">${card.hp||"—"}</td><td style="font-size:11px">${card.rarity||"—"}</td><td>${card.isFirstEdition?'<span class="first-ed">1st</span>':'<span style="color:var(--muted)">—</span>'}</td><td style="font-size:11px">${card.language||"—"}</td><td style="font-size:11px">${card.condition||"—"}</td><td style="color:var(--muted);font-size:11px">${card.attacks||"—"}</td><td style="color:var(--muted);font-size:11px">${card.addedAt||"—"}</td><td class="fn-cell" title="${card.filename}">${card.filename}</td><td><div class="act-btns"><button class="btn-edit" data-id="${card.id}">Edit</button><button class="btn-del" data-id="${card.id}">Delete</button></div></td></tr>`;
+    const thumb=card.thumb?`<img src="${card.thumb}" class="thumb" alt="${card.name}">`:`<div class="thumb-ph">🃏</div>`;
+    const driveCell=card.driveLink?`<a href="${card.driveLink}" target="_blank" class="drive-link">View</a>`:`<span style="color:var(--muted);font-size:10px">—</span>`;
+    html+=`<tr><td>${thumb}</td><td style="font-weight:500">${card.name||"—"}</td><td style="color:var(--muted);font-size:11px">${card.set||"—"}</td><td style="color:var(--muted)">${card.cardNumber||"—"}</td><td><span class="tb tb-${card.type}">${card.type||"—"}</span></td><td style="color:var(--acc);font-weight:600">${card.hp||"—"}</td><td style="font-size:11px">${card.rarity||"—"}</td><td>${card.isFirstEdition?'<span class="first-ed">1st</span>':'<span style="color:var(--muted)">—</span>'}</td><td style="font-size:11px">${card.language||"—"}</td><td style="font-size:11px">${card.condition||"—"}</td><td style="color:var(--muted);font-size:11px">${card.attacks||"—"}</td><td style="color:var(--muted);font-size:11px">${card.addedAt||"—"}</td><td class="fn-cell" title="${card.filename}">${card.filename}</td><td>${driveCell}</td><td><div class="act-btns"><button class="btn-edit" data-id="${card.id}">Edit</button><button class="btn-del" data-id="${card.id}">Delete</button></div></td></tr>`;
   });
   html+=`</tbody></table></div>`;
   $("collection-area").innerHTML=html;
@@ -243,26 +319,17 @@ function renderCollection(){
   $("collection-area").querySelectorAll(".btn-del").forEach(btn=>btn.addEventListener("click",()=>delCard(parseInt(btn.dataset.id))));
 }
 
-function delCard(id){
-  if(!confirm("Delete this card from your collection?"))return;
-  collection=collection.filter(c=>c.id!==id);
-  saveCol();updateStats();renderCollection();showToast("Card deleted");
-}
-
-function sopts(opts,val){return opts.map(o=>`<option value="${o}"${o===val?" selected":""}>${o}</option>`).join("");}
-function ssopts(val){return SETS.map(s=>`<option value="${s}"${s===val?" selected":""}>${s}</option>`).join("");}
+function delCard(id){if(!confirm("Delete this card?"))return;collection=collection.filter(c=>c.id!==id);saveCol();updateStats();renderCollection();showToast("Card deleted");}
 
 function openEdit(id){
   const card=collection.find(c=>c.id===id);if(!card)return;
-  $("edit-modal").innerHTML=`<div class="modal-ov" id="mov"><div class="modal-box"><div class="modal-title">✦ Edit Card</div><div class="fgrp"><div class="fld"><label>Pokemon Name</label><input id="e-name" value="${card.name||""}"></div><div class="fld"><label>Set</label><select id="e-set">${ssopts(card.set)}</select></div><div class="fld"><label>Card Number</label><input id="e-num" value="${card.cardNumber||""}"></div><div class="fld"><label>Type</label><select id="e-type">${sopts(TYPES,card.type)}</select></div><div class="fld"><label>HP</label><input id="e-hp" value="${card.hp||""}"></div><div class="fld"><label>Rarity</label><select id="e-rarity">${sopts(RARITIES,card.rarity)}</select></div><div class="fld"><label>Language</label><input id="e-lang" value="${card.language||"English"}"></div><div class="fld"><label>Condition</label><select id="e-cond">${sopts(CONDITIONS,card.condition||"Near Mint")}</select></div><div class="fld"><label>First Edition</label><select id="e-1ed"><option value="no"${!card.isFirstEdition?" selected":""}>No</option><option value="yes"${card.isFirstEdition?" selected":""}>Yes</option></select></div><div class="fld"><label>Attacks</label><input id="e-atk" value="${card.attacks||""}"></div></div><div class="modal-acts"><button class="btn-ok" id="e-save">Save Changes</button><button class="btn-no" id="e-cancel">Cancel</button></div></div></div>`;
+  $("edit-modal").innerHTML=`<div class="modal-ov" id="mov"><div class="modal-box"><div class="modal-title">Edit Card</div><div class="fgrp"><div class="fld"><label>Pokemon Name</label><input id="e-name" value="${card.name||""}"></div><div class="fld"><label>Set</label><select id="e-set">${ssopts(card.set)}</select></div><div class="fld"><label>Card Number</label><input id="e-num" value="${card.cardNumber||""}"></div><div class="fld"><label>Type</label><select id="e-type">${sopts(TYPES,card.type)}</select></div><div class="fld"><label>HP</label><input id="e-hp" value="${card.hp||""}"></div><div class="fld"><label>Rarity</label><select id="e-rarity">${sopts(RARITIES,card.rarity)}</select></div><div class="fld"><label>Language</label><input id="e-lang" value="${card.language||"English"}"></div><div class="fld"><label>Condition</label><select id="e-cond">${sopts(CONDITIONS,card.condition||"Near Mint")}</select></div><div class="fld"><label>First Edition</label><select id="e-1ed"><option value="no"${!card.isFirstEdition?" selected":""}>No</option><option value="yes"${card.isFirstEdition?" selected":""}>Yes</option></select></div><div class="fld"><label>Attacks</label><input id="e-atk" value="${card.attacks||""}"></div></div><div class="modal-acts"><button class="btn-ok" id="e-save">Save Changes</button><button class="btn-skip" id="e-cancel">Cancel</button></div></div></div>`;
   $("edit-modal").style.display="block";
   $("e-save").addEventListener("click",()=>{
     const u={...card,name:$("e-name").value,set:$("e-set").value,cardNumber:$("e-num").value,type:$("e-type").value,hp:$("e-hp").value,rarity:$("e-rarity").value,language:$("e-lang").value,condition:$("e-cond").value,isFirstEdition:$("e-1ed").value==="yes",attacks:$("e-atk").value};
     u.filename=genFilename(u,getDupeCount(u,id));
     collection[collection.findIndex(c=>c.id===id)]=u;
-    saveCol();updateStats();renderCollection();
-    $("edit-modal").style.display="none";$("edit-modal").innerHTML="";
-    showToast("Card updated!");
+    saveCol();updateStats();renderCollection();$("edit-modal").style.display="none";$("edit-modal").innerHTML="";showToast("Card updated!");
   });
   $("e-cancel").addEventListener("click",()=>{$("edit-modal").style.display="none";$("edit-modal").innerHTML="";});
   $("mov").addEventListener("click",e=>{if(e.target===$("mov")){$("edit-modal").style.display="none";$("edit-modal").innerHTML="";}});
@@ -270,83 +337,120 @@ function openEdit(id){
 
 $("export-btn").addEventListener("click",()=>{
   if(collection.length===0){showToast("No cards to export",true);return;}
-  const hdr=["Name","Set","Card Number","Type","HP","Rarity","First Edition","Language","Condition","Attacks","Added","Filename"];
-  const rows=collection.map(c=>[c.name,c.set,c.cardNumber,c.type,c.hp,c.rarity,c.isFirstEdition?"Yes":"No",c.language,c.condition,c.attacks,c.addedAt,c.filename].map(v=>`"${(v||"").toString().replace(/"/g,'""')}"`));
+  const hdr=["Name","Set","Card Number","Type","HP","Rarity","First Edition","Language","Condition","Attacks","Added","Filename","Drive Link"];
+  const rows=collection.map(c=>[c.name,c.set,c.cardNumber,c.type,c.hp,c.rarity,c.isFirstEdition?"Yes":"No",c.language,c.condition,c.attacks,c.addedAt,c.filename,c.driveLink||""].map(v=>`"${(v||"").toString().replace(/"/g,'""')}"`));
   const csv=[hdr.join(","),...rows.map(r=>r.join(","))].join("\n");
-  const a=document.createElement("a");
-  a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"}));
-  a.download="bridges-poketracker-"+new Date().toISOString().slice(0,10)+".csv";
-  a.click();showToast("CSV exported!");
+  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"}));a.download="bridges-poketracker-"+new Date().toISOString().slice(0,10)+".csv";a.click();showToast("CSV exported!");
 });
 
-function showUpload(){$("upz").style.display="block";$("preview-area").innerHTML="";$("analyze-area").innerHTML="";$("confirm-area").innerHTML="";$("file-in").value="";pendingPreview=null;}
-
-function showConfirm(card,preview){
-  $("analyze-area").innerHTML="";
-  const dc=getDupeCount(card);
-  $("confirm-area").innerHTML=`<div class="cfm"><div class="cfm-title">Confirm Card Info</div><div class="fgrp"><div class="fld"><label>Pokemon Name</label><input id="cf-name" value="${card.name||""}" placeholder="e.g. Charizard"></div><div class="fld"><label>Set</label><select id="cf-set">${ssopts(card.set)}</select></div><div class="fld"><label>Card Number</label><input id="cf-num" value="${card.cardNumber||""}" placeholder="e.g. 4/102"></div><div class="fld"><label>Type</label><select id="cf-type">${sopts(TYPES,card.type)}</select></div><div class="fld"><label>HP</label><input id="cf-hp" value="${card.hp||""}" placeholder="e.g. 120"></div><div class="fld"><label>Rarity</label><select id="cf-rarity">${sopts(RARITIES,card.rarity)}</select></div><div class="fld"><label>Language</label><input id="cf-lang" value="${card.language||"English"}"></div><div class="fld"><label>Condition</label><select id="cf-cond">${sopts(CONDITIONS,card.condition||"Near Mint")}</select></div><div class="fld"><label>First Edition</label><select id="cf-1ed"><option value="no"${!card.isFirstEdition?" selected":""}>No</option><option value="yes"${card.isFirstEdition?" selected":""}>Yes</option></select></div><div class="fld"><label>Attacks</label><input id="cf-atk" value="${card.attacks||""}" placeholder="e.g. Ember, Fire Spin"></div></div><div class="cfm-fn" id="cf-fn">📁 ${genFilename(card,dc)}</div><div class="cfm-acts"><button class="btn-ok" id="btn-confirm">Looks Good</button><button class="btn-no" id="btn-cancel">Cancel</button></div></div>`;
-  function upFn(){const n=$("cf-name").value,s=$("cf-set").value,num=$("cf-num").value;$("cf-fn").textContent="📁 "+genFilename({name:n,set:s,cardNumber:num},getDupeCount({name:n,set:s,cardNumber:num}));}
-  ["cf-name","cf-num"].forEach(id=>$(id).addEventListener("input",upFn));
-  $("cf-set").addEventListener("change",upFn);
-  $("btn-confirm").addEventListener("click",()=>{
-    const fc={name:$("cf-name").value,set:$("cf-set").value,cardNumber:$("cf-num").value,type:$("cf-type").value,hp:$("cf-hp").value,rarity:$("cf-rarity").value,language:$("cf-lang").value,condition:$("cf-cond").value,isFirstEdition:$("cf-1ed").value==="yes",attacks:$("cf-atk").value};
-    const dc3=getDupeCount(fc);
-    fc.filename=genFilename(fc,dc3);fc.id=Date.now();fc.imagePreview=preview;fc.addedAt=new Date().toLocaleDateString();fc.marketPrice=null;fc.priceHistory=[];
-    collection.push(fc);saveCol();updateStats();renderCollection();showUpload();
-    showToast(dc3>0?"Duplicate saved!":""+fc.name+" added!");
+// QUEUE
+function renderQueue(){
+  if(queue.length===0){$("queue-area").innerHTML="";return;}
+  const done=queue.filter(q=>q.status==="done").length;
+  let html=`<div class="queue-box"><div class="queue-title">Processing ${queue.length} card${queue.length>1?"s":""} — ${done}/${queue.length} done</div>`;
+  queue.forEach(q=>{
+    const dc=q.status==="done"?"q-done":q.status==="reading"?"q-active":q.status==="error"?"q-err":"q-wait";
+    const st=q.status==="done"?"Done":q.status==="reading"?"Reading...":q.status==="error"?"Error":"Waiting";
+    html+=`<div class="queue-item"><span class="q-dot ${dc}"></span><span class="q-name">${q.file.name}</span><span class="q-status">${st}</span></div>`;
   });
-  $("btn-cancel").addEventListener("click",showUpload);
+  html+=`</div>`;$("queue-area").innerHTML=html;
 }
 
-async function analyzeCard(base64,preview){
-  $("upz").style.display="none";
-  $("preview-area").innerHTML=`<div class="prev-card"><img src="${preview}" class="prev-img" alt="card"><div class="prev-ft"><span>Uploaded card</span></div></div>`;
-  $("analyze-area").innerHTML=`<div class="anl"><div class="spin"></div><div class="anl-txt">Reading card with AI...</div></div>`;
-  const prompt=`You are a Pokemon card expert. Examine this card image carefully and extract all visible information. Return ONLY valid JSON, no markdown, no backticks, no explanation:\n{"name":"exact Pokemon name","set":"official set name e.g. Journey Together, Base Set, Scarlet & Violet, 151","cardNumber":"e.g. 4/102","type":"one of: Fire,Water,Grass,Lightning,Psychic,Fighting,Darkness,Metal,Fairy,Dragon,Colorless","hp":"number or empty","rarity":"one of: Common,Uncommon,Rare,Rare Holo,Rare Ultra,Rare Secret,Promo,Amazing Rare,Rare Rainbow,Rare Gold","isFirstEdition":false,"language":"English/Japanese/Korean/French/German/Italian/Spanish/Portuguese","condition":"one of: Mint,Near Mint,Excellent,Good,Played,Poor","attacks":"comma-separated attack names or empty"}`;
-  try{
-    const res=await fetch("https://api.anthropic.com/v1/messages",{method:"POST",headers:{"Content-Type":"application/json","x-api-key":apiKey,"anthropic-version":"2023-06-01","anthropic-dangerous-direct-browser-access":"true"},body:JSON.stringify({model:"claude-opus-4-5",max_tokens:1000,messages:[{role:"user",content:[{type:"image",source:{type:"base64",media_type:"image/jpeg",data:base64}},{type:"text",text:prompt}]}]})});
-    if(!res.ok){const err=await res.json().catch(()=>({}));throw new Error(err?.error?.message||"API error "+res.status);}
-    const data=await res.json();
-    const tb=data.content?.find(b=>b.type==="text");
-    if(!tb)throw new Error("No response from AI");
-    const raw=tb.text.trim().replace(/^```json\s*/,"").replace(/^```\s*/,"").replace(/\s*```$/,"").trim();
-    const card=JSON.parse(raw);
-    showConfirm({name:card.name||"",set:matchSet(card.set),cardNumber:card.cardNumber||"",type:TYPES.includes(card.type)?card.type:"Colorless",hp:card.hp?.toString()||"",rarity:RARITIES.includes(card.rarity)?card.rarity:"Common",isFirstEdition:card.isFirstEdition===true||card.isFirstEdition==="true",language:card.language||"English",condition:CONDITIONS.includes(card.condition)?card.condition:"Near Mint",attacks:card.attacks||""},preview);
-  }catch(e){
-    console.error("Card analysis error:",e);
-    $("analyze-area").innerHTML="";
-    showToast("AI read failed — fill in manually",true);
-    showConfirm({name:"",set:"",cardNumber:"",type:"Colorless",hp:"",rarity:"Common",isFirstEdition:false,language:"English",condition:"Near Mint",attacks:""},preview);
+async function analyzeCardAI(base64){
+  const prompt=`You are a Pokemon card expert. Examine this card carefully. Return ONLY valid JSON, no markdown:\n{"name":"pokemon name","set":"official set name","cardNumber":"e.g. 4/102","type":"Fire/Water/Grass/Lightning/Psychic/Fighting/Darkness/Metal/Fairy/Dragon/Colorless","hp":"number or empty","rarity":"Common/Uncommon/Rare/Rare Holo/Rare Ultra/Rare Secret/Promo/Amazing Rare/Rare Rainbow/Rare Gold","isFirstEdition":false,"language":"English/Japanese/etc","condition":"Mint/Near Mint/Excellent/Good/Played/Poor","attacks":"comma separated or empty"}`;
+  const res=await fetch("https://api.anthropic.com/v1/messages",{method:"POST",headers:{"Content-Type":"application/json","x-api-key":apiKey,"anthropic-version":"2023-06-01","anthropic-dangerous-direct-browser-access":"true"},body:JSON.stringify({model:"claude-opus-4-5",max_tokens:800,messages:[{role:"user",content:[{type:"image",source:{type:"base64",media_type:"image/jpeg",data:base64}},{type:"text",text:prompt}]}]})});
+  if(!res.ok){const e=await res.json().catch(()=>({}));throw new Error(e?.error?.message||"API error "+res.status);}
+  const d=await res.json();const tb=d.content?.find(b=>b.type==="text");if(!tb)throw new Error("No response");
+  const raw=tb.text.trim().replace(/^```json\s*/,"").replace(/^```\s*/,"").replace(/\s*```$/,"").trim();
+  return JSON.parse(raw);
+}
+
+async function processQueue(){
+  for(let i=0;i<queue.length;i++){
+    const item=queue[i];item.status="reading";renderQueue();
+    try{
+      const dataUrl=await new Promise((res,rej)=>{const r=new FileReader();r.onload=e=>res(e.target.result);r.onerror=rej;r.readAsDataURL(item.file);});
+      item.dataUrl=dataUrl;
+      item.aiDataUrl=await compressImage(dataUrl,1200,0.85);
+      item.base64=item.aiDataUrl.split(",")[1];
+      item.thumb=await compressImage(dataUrl,200,0.7);
+      try{
+        const card=await analyzeCardAI(item.base64);
+        item.aiResult={name:card.name||"",set:matchSet(card.set),cardNumber:card.cardNumber||"",type:TYPES.includes(card.type)?card.type:"Colorless",hp:card.hp?.toString()||"",rarity:RARITIES.includes(card.rarity)?card.rarity:"Common",isFirstEdition:card.isFirstEdition===true,language:card.language||"English",condition:CONDITIONS.includes(card.condition)?card.condition:"Near Mint",attacks:card.attacks||""};
+      }catch(e){item.aiResult={name:"",set:"",cardNumber:"",type:"Colorless",hp:"",rarity:"Common",isFirstEdition:false,language:"English",condition:"Near Mint",attacks:""};item.aiError=true;}
+      item.status="ready";
+    }catch(e){item.status="error";item.aiError=true;item.aiResult={name:"",set:"",cardNumber:"",type:"Colorless",hp:"",rarity:"Common",isFirstEdition:false,language:"English",condition:"Near Mint",attacks:""};}
+    renderQueue();
   }
+  queueIdx=0;showVerify();
 }
 
-function compressImage(dataUrl,maxWidth,quality,cb){
-  const img=new Image();
-  img.onload=()=>{
-    const canvas=document.createElement("canvas");
-    let w=img.width,h=img.height;
-    if(w>maxWidth){h=Math.round(h*maxWidth/w);w=maxWidth;}
-    canvas.width=w;canvas.height=h;
-    canvas.getContext("2d").drawImage(img,0,0,w,h);
-    cb(canvas.toDataURL("image/jpeg",quality));
-  };
-  img.src=dataUrl;
+function showVerify(){
+  if(queueIdx>=queue.length){$("verify-overlay").style.display="none";$("verify-overlay").innerHTML="";queue=[];queueIdx=0;renderQueue();showToast("All cards processed!");return;}
+  const item=queue[queueIdx];const card=item.aiResult;const total=queue.length;const current=queueIdx+1;const dc=getDupeCount(card);
+  $("verify-overlay").style.display="flex";
+  $("verify-overlay").innerHTML=`
+    <div class="verify-box">
+      <div class="verify-img-pane">
+        <img src="${item.dataUrl||item.aiDataUrl}" class="verify-card-img" alt="card">
+        <div class="verify-progress">Card ${current} of ${total}</div>
+        <div class="verify-prog-bar"><div class="verify-prog-fill" style="width:${Math.round(current/total*100)}%"></div></div>
+        ${item.aiError?'<div style="font-size:10px;color:var(--acc2);text-align:center">AI could not read — fill in manually</div>':""}
+      </div>
+      <div class="verify-form-pane">
+        <div class="verify-title">Confirm Card Info</div>
+        <div class="verify-sub">Review the detected info and correct anything before saving.</div>
+        <div class="fgrp">
+          <div class="fld"><label>Pokemon Name</label><input id="vf-name" value="${card.name||""}" placeholder="e.g. Charizard"></div>
+          <div class="fld"><label>Set</label><select id="vf-set">${ssopts(card.set)}</select></div>
+          <div class="fld"><label>Card Number</label><input id="vf-num" value="${card.cardNumber||""}" placeholder="e.g. 4/102"></div>
+          <div class="fld"><label>Type</label><select id="vf-type">${sopts(TYPES,card.type)}</select></div>
+          <div class="fld"><label>HP</label><input id="vf-hp" value="${card.hp||""}" placeholder="e.g. 120"></div>
+          <div class="fld"><label>Rarity</label><select id="vf-rarity">${sopts(RARITIES,card.rarity)}</select></div>
+          <div class="fld"><label>Language</label><input id="vf-lang" value="${card.language||"English"}"></div>
+          <div class="fld"><label>Condition</label><select id="vf-cond">${sopts(CONDITIONS,card.condition||"Near Mint")}</select></div>
+          <div class="fld"><label>First Edition</label><select id="vf-1ed"><option value="no"${!card.isFirstEdition?" selected":""}>No</option><option value="yes"${card.isFirstEdition?" selected":""}>Yes</option></select></div>
+          <div class="fld"><label>Attacks</label><input id="vf-atk" value="${card.attacks||""}" placeholder="e.g. Ember, Fire Spin"></div>
+        </div>
+        <div class="cfm-fn" id="vf-fn">📁 ${genFilename(card,dc)}</div>
+        <div class="verify-acts">
+          <button class="btn-ok" id="vf-confirm">Save Card</button>
+          <button class="btn-skip" id="vf-skip">Skip</button>
+        </div>
+      </div>
+    </div>`;
+
+  function upFn(){const n=$("vf-name").value,s=$("vf-set").value,num=$("vf-num").value;$("vf-fn").textContent="📁 "+genFilename({name:n,set:s,cardNumber:num},getDupeCount({name:n,set:s,cardNumber:num}));}
+  ["vf-name","vf-num","vf-lang","vf-atk","vf-hp"].forEach(id=>$(id).addEventListener("input",upFn));
+  $("vf-set").addEventListener("change",upFn);
+
+  $("vf-confirm").addEventListener("click",async()=>{
+    const fc={name:$("vf-name").value,set:$("vf-set").value,cardNumber:$("vf-num").value,type:$("vf-type").value,hp:$("vf-hp").value,rarity:$("vf-rarity").value,language:$("vf-lang").value,condition:$("vf-cond").value,isFirstEdition:$("vf-1ed").value==="yes",attacks:$("vf-atk").value};
+    const dc3=getDupeCount(fc);fc.filename=genFilename(fc,dc3);
+    fc.id=Date.now()+Math.random();fc.thumb=item.thumb||null;fc.addedAt=new Date().toLocaleDateString();fc.marketPrice=null;fc.priceHistory=[];fc.driveLink=null;
+    if(gdriveToken&&item.base64){
+      $("vf-confirm").textContent="Uploading...";$("vf-confirm").disabled=true;
+      fc.driveLink=await uploadToDrive(item.base64,fc.filename);
+      if(fc.driveLink)showToast("Uploaded to Google Drive!");
+    }
+    collection.push(fc);saveCol();updateStats();renderCollection();
+    queue[queueIdx].status="done";queueIdx++;renderQueue();showVerify();
+  });
+  $("vf-skip").addEventListener("click",()=>{queue[queueIdx].status="done";queueIdx++;renderQueue();showVerify();});
 }
 
-function handleFile(file){
-  if(!file||!file.type.startsWith("image/"))return;
-  const reader=new FileReader();
-  reader.onload=e=>{compressImage(e.target.result,1200,0.85,compressed=>{pendingPreview=compressed;analyzeCard(compressed.split(",")[1],compressed);});};
-  reader.onerror=()=>showToast("Could not read image file",true);
-  reader.readAsDataURL(file);
+function handleFiles(files){
+  if(!files||files.length===0)return;
+  queue=Array.from(files).map(f=>({file:f,dataUrl:null,aiDataUrl:null,base64:null,thumb:null,aiResult:null,status:"waiting",aiError:false}));
+  queueIdx=0;renderQueue();processQueue();
 }
 
 $("upz").addEventListener("click",()=>$("file-in").click());
 $("up-btn").addEventListener("click",e=>{e.stopPropagation();$("file-in").click();});
-$("file-in").addEventListener("change",e=>{if(e.target.files[0])handleFile(e.target.files[0]);});
+$("file-in").addEventListener("change",e=>{if(e.target.files.length)handleFiles(e.target.files);});
 $("upz").addEventListener("dragover",e=>{e.preventDefault();$("upz").classList.add("drag");});
 $("upz").addEventListener("dragleave",()=>$("upz").classList.remove("drag"));
-$("upz").addEventListener("drop",e=>{e.preventDefault();$("upz").classList.remove("drag");if(e.dataTransfer.files[0])handleFile(e.dataTransfer.files[0]);});
+$("upz").addEventListener("drop",e=>{e.preventDefault();$("upz").classList.remove("drag");if(e.dataTransfer.files.length)handleFiles(e.dataTransfer.files);});
 $("f-name").addEventListener("input",e=>{filters.name=e.target.value;renderFilters();renderCollection();});
 $("f-lang").addEventListener("input",e=>{filters.language=e.target.value;renderFilters();renderCollection();});
 $("f-set").addEventListener("change",e=>{filters.set=e.target.value;renderFilters();renderCollection();});
